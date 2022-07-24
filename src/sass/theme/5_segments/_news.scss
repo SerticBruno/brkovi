@@ -1,0 +1,147 @@
+.news{
+
+    @include fluid('padding-top', 20, 60);
+    @include fluid('padding-bottom', 20, 60);
+
+    &-title{
+        @include fluid('padding-bottom', 20, 60);
+    }
+
+    &-list{
+        justify-content:  center;
+        --bs-gutter-y: 15px;
+    }
+
+    &-card{
+        width: 100%;
+        height: 100%;
+        border: 8px solid black;
+        border-radius: 0;
+
+        .author{
+            text-transform: uppercase;
+        }
+
+        time{
+            font-weight: 600;
+            font-size: 1.2rem;
+        }
+
+        img{
+            margin-top: 0;
+            margin-bottom: 0;
+            height: 260px;
+            object-fit: cover;
+            object-position: center;
+        }
+
+        .info{
+            border-top: 8px solid black;
+        }
+    }
+    
+    .link-wrapper{
+        a{
+            .img-wrapper{
+                overflow: hidden;
+
+                img{
+                    transition: all .3s ease;
+                }
+            }
+
+            &:hover{
+                color: $black;
+
+                img{
+                    transition: all .3s ease;
+                    transform: scale(1.2);
+                }
+                            
+                .card-footer-title{
+                    transition: all .3s ease;
+                    transform: rotate(var(--hoverRotate)) !important;
+
+                    h2{
+                        transition: all .3s ease;
+                        color: $black;
+                        background-color: $white;
+                        
+                        &::after{
+                            background-color: $black;
+                        }
+                        
+                        &::before{
+                            background-color: $white;
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+    .card-footer-title{
+        display: flex;
+        margin-left: 20%;
+        margin-right: 10%;
+        margin-top: -35px;
+        position: absolute;
+        z-index: 55;
+        transition: all .3s ease;
+        // $randomNumber:
+        transform: rotate(var(--hoverRotate));
+
+        h2{
+            color: $white;
+            background-color: $black;
+            text-align: center;
+            transition: all .3s ease;
+
+                
+            &::after{
+                transition: all .3s ease;
+                content: " ";
+                position: absolute;
+                top: -5px;
+                bottom: -5px;
+                left: -5px;
+                right: -5px;
+                background-color: $white;
+                z-index: -1;
+            }
+              
+            &::before{
+                transition: all .3s ease;
+                content: " ";
+                position: absolute;
+                top: -13px;
+                bottom: -13px;
+                left: -13px;
+                right: -13px;
+                background-color: $black;
+                z-index: -1;
+            }
+        }
+
+        &-sign{
+            border: 19px solid $white;
+            border-radius: 5px;
+            
+            h2{
+                color: $black;
+                background-color: rgb(255, 187, 61);
+                text-align: center;
+                    
+                &::after{
+                    background-color: $black;
+                    border-radius: 5px;
+                }
+                    
+                &::before{
+                    background-color: rgb(255, 187, 61);
+                    border-radius: 5px;
+                }
+            }
+        }
+    }
+}

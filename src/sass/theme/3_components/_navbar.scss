@@ -1,0 +1,143 @@
+.navbar {
+    background-color: $black;
+    box-shadow: 0 5px 20px 0px $black;
+    position: fixed;
+    width: 100%;
+    z-index: 99;
+    padding: 0;
+    transition: $transition;
+
+    ul{
+
+        li{
+            margin-right: 30px;
+            list-style-type: none;
+            padding: 0 15px;
+            position: relative;
+
+            &:last-child {
+                margin-right: 0px;
+            }
+
+            a{
+                width: 100%;
+                color: $primary;
+                transition: all .2s ease;
+                font-size: 24px;
+                display: inline-block;
+                padding: 35px 0;
+                font-weight: 600;
+
+                &:hover{
+                    transition: all .2s ease;
+                    color: white;
+                }
+            }
+            
+            
+            &.current-menu-item{
+                a{
+                    color: $white;
+                }
+            }
+
+            &:hover{
+                
+                .sub-menu{
+                    visibility: visible;
+                    transition: all .2s ease;
+                    opacity: 1;
+
+                    li{
+                        list-style-type: none;
+                    }
+                }
+            }
+            
+
+            .sub-menu{
+                position: absolute;
+                visibility: hidden;
+                opacity: 0;
+                background-color: $black;
+                left: 0;
+                padding-left: 0;
+                transition: all .2s ease;
+                margin-right: 0px;
+                
+                li{
+                    width: 100%;
+                    background-color: $black;
+                    color: $primary;
+
+                    a{
+                        color: $primary;
+                        transition: all .2s ease;
+                        padding: 15px 0;
+                                
+                        &:hover{
+                            transition: all .2s ease;
+                            color: $white;
+                        }
+                    }
+                    
+                    &.current-menu-item{
+                        a{
+                            color: $white;
+                        }
+                    }
+                }
+            }
+        }
+        
+    }
+
+    .logo-wrapper{
+        display: flex;
+        align-items: center;
+        position: relative;
+    }
+    
+    &-brand{
+        padding: 0;
+        margin-right: 0;
+
+        img{
+            transition: all .3s ease;
+            height: 48px;
+            margin: 0;
+            opacity: 1.5;
+            // filter: grayscale(100%) sepia(100%) hue-rotate(65deg);
+            
+        }
+    }
+
+    &.scrolled{
+        // transition: $transition;
+
+        .navbar-brand{
+            img{
+                transition: all .3s ease;
+                height: 36px;
+            }
+        }
+
+        ul{
+            li{
+                a{
+                    transition: all .3s ease;
+                    padding: 15px 0;
+                    font-size: 18px;
+                }
+            }
+        }
+    }
+    
+    &-toggler{
+        border: 0;
+        &:focus, &:focus-visible{
+            box-shadow: none;
+        }
+    }
+}
+
