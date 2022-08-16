@@ -36,6 +36,8 @@ gulp.task('install', function(done) {
     //     .pipe( gulp.dest( `./src/vendor/chart.js` ) );
     gulp.src( `./node_modules/gsap/**/*` )
         .pipe( gulp.dest( `./src/vendor/gsap` ) );
+    gulp.src( `./node_modules/simplelightbox/dist/**/*` )
+        .pipe( gulp.dest( `./src/vendor/simplelightbox` ) );
     // gulp.src( `./node_modules/readmore-js/**/*` )
     //     .pipe( gulp.dest( `./src/vendor/readmore-js` ) );
 //    gulp.src( `./node_modules/font-awesome/fonts/**/*.{ttf,woff,woff2,eot,svg}` )
@@ -105,6 +107,7 @@ gulp.task('script', function(done) {
         `./src/vendor/bootstrap/dist/js/bootstrap.bundle.js`,
         `./src/vendor/swiper/swiper-bundle.js`,
         `./src/vendor/gsap/dist/CSSRulePlugin.js`,
+        `./src/vendor/simplelightbox/simple-lightbox.jquery.js`,
         `./src/vendor/gsap/dist/gsap.js`,
         `./src/vendor/gsap/dist/ScrollTrigger.js`,
         `./src/vendor/gsap/dist/EasePack.js`,
