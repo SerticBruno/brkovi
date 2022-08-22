@@ -1,13 +1,13 @@
 <?php
 
 // myErr($params);
-$post_info = get_field('post_info', $post->ID);
+$post_info = get_field('post_hero', $post->ID);
 
 if(!is_null($post_info)){
     $title = $post->post_title;
 }else{
     $title = $params['title'];
-    $post_info = (array)$params;
+    $post_info = $params;
 }
 
 $style = $post_info['style'];
@@ -49,7 +49,7 @@ $button = $post_info['button'];
                             </div>
                             <div class="row">
                                 <div class="col-6">
-                                    <div class="green-button-wrapper">
+                                    <div class="button-wrapper">
                                         <?php include THEME_DIR . '/templates/acf/button-show.php'; ?>
                                     </div>
                                 </div>
@@ -139,6 +139,7 @@ $button = $post_info['button'];
                         $image = wp_get_attachment_image($v['image']['id'], 'full', false, ['class' => 'hero-slide-bg-img', 'style'  => 'object-fit: cover;']);
                         $title = $v['title'];
                         $showButton = $v['show_button'];
+                        myErr($v);
                     ?>
 
                     <div class="swiper-slide hero-slide">
@@ -169,7 +170,7 @@ $button = $post_info['button'];
                             </div>
                             <div class="row">
                                 <?php if($showButton == 1) { ?>
-                                    <div class="col-6">
+                                    <div class="col-6 button-wrapper">
                                         <?php 
                                             $button = $v['button'];
                                             include THEME_DIR . '/templates/acf/button-show.php'; 

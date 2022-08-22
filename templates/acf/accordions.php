@@ -67,7 +67,7 @@ $wp_query = new WP_Query($args);
                                         <a class="post-link" href="<?php echo get_post_permalink($concert_info['post']) ?>">
                                             POGLEDAJ VIŠE
                                             <div class="img-wrapper img-wrap-arrow d-flex align-items-center">
-                                                <img class="arrow-next" src="<?php echo THEME_URL ?>/assets/img/svg/arrowNext.svg">
+                                                <img class="arrow-next replaceSvg" src="<?php echo THEME_URL ?>/assets/img/svg/arrowNext.svg">
                                             </div>
                                         </a>
                                     </div>

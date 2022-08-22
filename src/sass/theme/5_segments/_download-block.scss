@@ -44,6 +44,7 @@
                     background-color: white;
                     width: 32px;
                     height: 32px;
+                    outline: 5px solid black;
                     transform: rotate(-15deg);
                 }
             }
@@ -84,9 +85,13 @@
                     background-color: white;
                     color: black;
                     outline-color: black;
-                        
+
                     &::after{
-                        outline-color: black;
+                        // outline: 5px solid white;
+                        background-color: black;
+                        outline-color: white;
+                        border-color: black;
+                        background-image: url('../img/png/downloadWhite.png');
                     }
                 }
             }
@@ -104,6 +109,7 @@
             .title-rot-2{
                 transform: rotate(5deg) scale(1.1);
             }
+            
         }
 
         &::after{
