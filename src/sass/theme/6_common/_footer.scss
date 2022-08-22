@@ -24,6 +24,9 @@
     }
 
     &-socials{
+        @include fluid('padding-left', 0, 40);
+        @include fluid('padding-right', 0, 40);
+
         li{
             a{
                 img{
@@ -65,8 +68,15 @@
 
     &-rip{
         background-color: white;
+
         img{
             width: 100%;
+            object-fit: cover;
+                
+            @include media-breakpoint-down(md) {
+                height: 70px;
+            }
+
         }
     }
     #copyright{

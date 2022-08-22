@@ -139,7 +139,6 @@ $button = $post_info['button'];
                         $image = wp_get_attachment_image($v['image']['id'], 'full', false, ['class' => 'hero-slide-bg-img', 'style'  => 'object-fit: cover;']);
                         $title = $v['title'];
                         $showButton = $v['show_button'];
-                        myErr($v);
                     ?>
 
                     <div class="swiper-slide hero-slide">
