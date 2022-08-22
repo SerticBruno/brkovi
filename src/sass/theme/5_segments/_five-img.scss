@@ -1,19 +1,9 @@
 .five-img {
-
-    @include fluid('padding-top', 20, 60);
-    @include fluid('padding-bottom', 20, 60);
+    @include fluid('padding-top', 20, 40);
     
-    @include media-breakpoint-up(lg) {
-            
-        @include fluid('padding-top', 20, 60);
-        @include fluid('padding-bottom', 20, 60);
+    img{
+        margin: 0;
     }
-
-    @include media-breakpoint-up(xxl) {
-        @include fluid('padding-top', 20, 60);
-        @include fluid('padding-bottom', 20, 60);
-    }
-    
 
     .grid-container {
         display: grid;

@@ -1,13 +1,8 @@
 .two-img {
-    
-    padding-bottom: 32px;
-    
-    @include media-breakpoint-up(lg) {
-        padding-bottom: 55px;
-    }
+    @include fluid('padding-top', 20, 40);
 
-    @include media-breakpoint-up(xxl) {
-        padding-bottom: 72px;
+    img{
+        margin: 0;
     }
     
     .grid-container {

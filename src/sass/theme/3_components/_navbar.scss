@@ -7,12 +7,16 @@
     padding: 0;
     transition: $transition;
 
+    @include media-breakpoint-down(lg) {
+        padding: 15px 0;
+    }
+
+
     ul{
 
         li{
             margin-right: 30px;
             list-style-type: none;
-            padding: 0 15px;
             position: relative;
 
             &:last-child {
@@ -73,7 +77,11 @@
                     a{
                         color: $primary;
                         transition: all .2s ease;
-                        padding: 15px 0;
+                        padding: 15px;
+                                    
+                        @include media-breakpoint-down(md) {
+                            padding-left: 25px;
+                        }
                                 
                         &:hover{
                             transition: all .2s ease;
@@ -126,17 +134,98 @@
             li{
                 a{
                     transition: all .3s ease;
-                    padding: 15px 0;
                     font-size: 18px;
+                    padding: 15px 10px;
                 }
             }
         }
     }
     
-    &-toggler{
+    &-toggler {
+        // width: 32px;
+        // height: 32px;
         border: 0;
-        &:focus, &:focus-visible{
-            box-shadow: none;
+        padding: 10px 6px;
+        margin: -5px -3px -5px 0;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        align-items: flex-end;
+
+        &:focus, &:active, &:hover {
+            outline: none;
+            box-shadow: 0 0 0 0;
+        }
+
+        &-icon {
+
+            background-image: none !important;
+
+            height: 26px;
+            width: 26px;
+            display: flex;
+            flex-direction: column;
+            position: relative;
+
+            &-line {
+                width: 100%;
+                height: 2px;
+                background-color: $primary;
+                transition: $transition;
+                position: absolute;
+                &:nth-child(1) {
+                    top: 0;
+                    transform: rotate(0deg);
+                }
+                &:nth-child(2) {
+                    width: calc(100% - 7px);
+                    top: 50%;
+                    right: 0;
+                    transform: translateY(-50%);
+                }
+                &:nth-child(3) {
+                    top: 100%;
+                    transform: rotate(0deg) translateY(-100%);
+                }
+            }
+        }
+
+        &.open {
+            .navbar-toggler-icon-line {
+                background-color: $primary;
+                &:nth-child(1) {
+                    top: 50%;
+                    transform: rotate(45deg);
+                }
+                &:nth-child(2) {
+                    opacity: 0;
+                    transform: scale(0);
+                }
+                &:nth-child(3) {
+                    top: 50%;
+                    transform: rotate(-45deg) translateY(0);
+                }
+            }
+        }
+    }
+
+    &-collapse{
+        .menu-main-menu-container{
+            @include media-breakpoint-down(lg) {
+                height: 100vh;
+                padding-bottom: 130px;
+                overflow-y: scroll;
+
+                a{
+                    padding: 15px 0;
+                }
+                
+                .sub-menu{
+                    position: relative;
+                    visibility: visible;
+                    opacity: 1;
+                }
+            }
         }
     }
 }

@@ -50,6 +50,10 @@
                 }
             }
 
+            &:focus, &:active{
+                color: black;
+            }
+
             &:hover{
                 color: $black;
 
