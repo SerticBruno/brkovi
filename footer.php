@@ -9,7 +9,7 @@
 			</div>
 			<div class="container">
 				<div class="row">
-					<div class="col-2">
+					<div class="col-6 col-md-2">
 							<?php  wp_nav_menu(
 							[
 								'theme_location'  => 'footer',
@@ -19,7 +19,7 @@
 							]
 						); ?>
 					</div>
-					<div class="col-8">
+					<div class="col-12 col-md-8 order-last">
 						<ul class="footer-socials d-flex justify-content-around">
 							<li class="d-inline">
 								<a class="d-inline-block" href="#">
@@ -48,7 +48,7 @@
 							</li>
 						</ul>						
 					</div>
-					<div class="col-2 info-text">
+					<div class="col-6 col-md-2 info-text order-md-last">
 						<p>
 							10 000, Zagreb<br>
 							Croatia, republic of
