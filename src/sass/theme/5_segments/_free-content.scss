@@ -5,6 +5,7 @@
     p {
         @include fluid('font-size', 18, 20);
         @include fluid('line-height', 32, 36);
+        
         a{
             text-decoration: underline;
             // font-size: 20px;
