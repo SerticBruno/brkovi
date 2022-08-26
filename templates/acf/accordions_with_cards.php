@@ -14,7 +14,7 @@ $wp_query = new WP_Query($args);
 // myErr($wp_query->posts);
 ?>
 
-<section class="concert-accordions">
+<section class="concert-accordions youtube-cards">
     <div class="container">
         <div class="row justify-content-center">
             <div class="accordion col-12" id="accordionExample">
@@ -22,7 +22,6 @@ $wp_query = new WP_Query($args);
                     <?php
 
                         $concert_info = get_field('concert_info', $v->ID);
-
                         $rand = rand(1, 4);
                         $randRot = $rand * .1;
 
@@ -46,7 +45,7 @@ $wp_query = new WP_Query($args);
                                 <div class="accordion-title row w-100">
                                     <div class="col-6">
                                         <p>
-                                            <?php echo ($v['title']) ?>
+                                            <?php echo ($v['album']->post_title) ?>
                                         </p>
                                     </div>
                                     <!-- <?php if(!empty($date) || !empty($time)) { ?>
@@ -61,15 +60,30 @@ $wp_query = new WP_Query($args);
                         </h2>
                         <div id="collapse-<?php echo $k ?>" class="accordion-collapse collapse <?php echo ($k > 0) ? '' : 'show' ?>" aria-labelledby="heading-<?php echo $k ?>"               data-bs-parent="#accordionExample">
                             <div class="accordion-body">
-                                <?php echo $v['content'] ?>
                                 
-                                <div class="row">
+                                <?php 
+                                    //  get album builder and songs 
+                                    $album = get_field('album_info', $v['album']->ID);
+                                ?>
+
+                                <?php echo $album['description'] ?>
+                                
+                                <div class="row justify-content-around">
                                     <!-- ovdje sve pjesme iz albuma -->
-                                    <?php foreach($v['songs'] as $k => $s) { ?>
-                                        <div class="col-4 card">
-                                            <?php echo $s['title'] ?>
+                                    <?php foreach($album['songs'] as $k => $v) { ?>
+                                        <?php 
+                                            $video = checkID($v['youtube_link']);
+                                        ?>
+
+                                        <div class="card my-3">
+                                            <iframe src="https://www.youtube.com/embed/<?php echo $video['id'] ?>">
+                                            </iframe>
+                                            <div class="card-title">
+                                                <h4><?php echo $k+1 . '. ' . $v['title']?></h4>
+                                            </div>
                                         </div>
                                     <?php } ?>
+
                                 </div>
 
 

@@ -100,4 +100,12 @@
         border-top: 0 !important;
         border-radius: 0 !important;
     }
+
+    .card{
+        width: 30%;
+        &-title{
+            margin: 0;
+            padding: 10px;
+        }
+    }
 }

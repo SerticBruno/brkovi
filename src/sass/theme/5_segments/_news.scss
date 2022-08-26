@@ -62,7 +62,7 @@
                     transform: scale(1.2);
                 }
                             
-                .card-footer-title{
+                .card-title{
                     transition: all .3s ease;
                     transform: rotate(var(--hoverRotate)) !important;
 
@@ -84,7 +84,7 @@
         }
     }
 
-    .card-footer-title{
+    .card-title{
         display: flex;
         margin-left: 20%;
         margin-right: 10%;

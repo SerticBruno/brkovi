@@ -25,17 +25,17 @@ else{
 <div class="col-lg-4 pb-5 link-wrapper">
     <a href="<?php echo get_permalink($post); ?>" class="position-relative">
         <div class="news-card card">
+            <div class="card-title" style="transform: rotate(<?php echo $startRot ?>deg); --hoverRotate: <?php echo $hoverRot ?>deg;">
+                <h2 class="p-3"><?php echo get_the_title($post) ?></h2>
+            </div>
             <div class="img-wrapper">
                 <?php echo $image ?>
             </div>
-            <div class="info p-3 pb-5">
+            <div class="info p-3">
                 <time class="strong"><?php echo get_the_date('d M Y', $post) ?></time>
                 <p><?php echo get_the_excerpt($post) ?></p>
                 <span class="author">- <?php echo get_the_author_meta('user_nicename', $post->post_author) ?></span>
             </div>
-        </div>
-        <div class="card-footer-title" style="transform: rotate(<?php echo $startRot ?>deg); --hoverRotate: <?php echo $hoverRot ?>deg;">
-            <h2 class="p-3"><?php echo get_the_title($post) ?></h2>
         </div>
     </a>
 </div>
