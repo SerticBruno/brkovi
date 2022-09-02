@@ -3,7 +3,18 @@
 			$footer = get_field('footer', 'option');
 			//myErr($footer);
 		?>
+
 		<footer class="footer pb-3" role="contentinfo">
+			<div class="modal fade" id="modal" tabindex="-1">
+				<div class="modal-dialog">
+					<div class="modal-content">
+					<button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+						<div class="modal-body">
+						</div>
+					</div>
+				</div>
+			</div>
+
 			<div class="footer-rip">
 				<img src="<?php echo THEME_URL ?>/assets/img/png/footer-rip.png"/>
 			</div>

@@ -7,8 +7,6 @@
 /**************************************************************************************************/
 jQuery(document).ready(function(){
 
-
-
 	img2svg('.replaceSvg');
 
     /*
@@ -121,6 +119,47 @@ jQuery(document).ready(function(){
     readmoreCustom();
     readmoreCustomBig();
     navbarScroll();
+
+    youtubeCardsLazyLoad();
+
+	// jQuery('.video-play').on('click', function() {
+    //     // console.log('a');
+    //     // console.log(this);
+    //     if (jQuery(this).data('from') == 'lf') {
+    //         jQuery(this).prev().find('video > source').attr('src', jQuery(this).data('src'));
+    //         jQuery(this).prev().find('video')[0].load();
+    //     } else {
+    //         // jQuery(this).prev().find('iframe').attr('src', jQuery(this).data('src'));
+    //         jQuery(this).prev().attr('src', jQuery(this).data('src'));
+    //     }
+    //     jQuery(this).prev().addClass('show');
+    //     jQuery(this).fadeOut();
+    // });
+
+    
+    jQuery('.video-play-modal').on('click', function(e) {
+        var data = jQuery(this).data();
+        console.log('data');
+        console.log(data);
+        if (data.from == 'lf') {
+            var video = '<video class="w-100" controls autoplay><source src="' + data.src + '" type="video/mp4" /></video>';
+        } else {
+            var video = '<iframe src="' + data.src + '" frameborder="0" allow="autoplay" allowfullscreen></iframe>';
+        }
+        //find modal
+        var modal = jQuery('.modal').find('.modal-body');
+
+        // jQuery(data.bsTarget).find('.modal-body').html(video);
+        modal.html(video);
+
+        console.log('data.bstarge');
+        console.log(data.bsTarget);
+
+        jQuery(data.bsTarget).one('hide.bs.modal', function() {
+            jQuery(data.bsTarget).find('.modal-body').html('');
+        });
+    });
+
 });
 
 

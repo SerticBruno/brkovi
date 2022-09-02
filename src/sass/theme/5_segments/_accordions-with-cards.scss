@@ -1,4 +1,4 @@
-.concert-accordions{
+.accordions-with-cards{
     @include fluid('padding-top', 20, 60);
     @include fluid('padding-bottom', 20, 60);
 
@@ -102,10 +102,16 @@
     }
 
     .card{
-        width: 30%;
+        // width: 30%;
         &-title{
             margin: 0;
             padding: 10px;
         }
     }
+
+    .video-cover{
+        // height: 250px;
+        width: 100%;
+    }
+    
 }

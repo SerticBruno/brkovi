@@ -353,3 +353,17 @@ function navbarScroll() {
 
     };
 }
+
+function youtubeCardsLazyLoad(){
+    
+    // var elements = document.querySelectorAll('.accordion-button');
+    // var cards = elements[0];
+    // console.log(cards);
+    // for (i = 0; i < elements.length; i++) {
+    //     elements[i].addEventListener("click", function() {
+    //         this.querySelectorAll('lazy-load-card');
+            
+    //     });
+    // }
+
+}

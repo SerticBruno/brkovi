@@ -12,9 +12,13 @@ $args = [
 $wp_query = new WP_Query($args);
 // myErr($wp_query);
 // myErr($wp_query->posts);
+
+$header = get_field('header', 'option');
+$logo = $header['logo']['url']; 
+
 ?>
 
-<section class="concert-accordions youtube-cards">
+<section class="accordions-with-cards youtube-cards">
     <div class="container">
         <div class="row justify-content-center">
             <div class="accordion col-12" id="accordionExample">
@@ -73,15 +77,21 @@ $wp_query = new WP_Query($args);
                                     <?php foreach($album['songs'] as $k => $v) { ?>
                                         <?php 
                                             $video = checkID($v['youtube_link']);
+                                            // myErr($video);
+                                            $url = "https://www.youtube.com/embed/{$video['id']}?autoplay=1&modestbranding=1&rel=0&fs=1&enablejsapi=1";
                                         ?>
 
-                                        <div class="card my-3">
-                                            <iframe src="https://www.youtube.com/embed/<?php echo $video['id'] ?>">
-                                            </iframe>
-                                            <div class="card-title">
-                                                <h4><?php echo $k+1 . '. ' . $v['title']?></h4>
+                                        <div class="col-lg-4 mb-3">
+                                            <div class="card my-3 h-100">
+                                                <!-- <iframe src="" frameborder="0" allow="autoplay" allowfullscreen></iframe> -->
+
+                                                <img class="video-cover video-play-modal" data-bs-toggle="modal" data-bs-target="#modal" data-src="<?php echo $url; ?>" src="<?php echo $logo ?>"/>
+                                                <div class="card-title">
+                                                    <h4><?php echo $k+1 . '. ' . $v['title']?></h4>
+                                                </div>
                                             </div>
                                         </div>
+
                                     <?php } ?>
 
                                 </div>

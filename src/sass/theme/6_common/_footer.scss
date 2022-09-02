@@ -82,5 +82,28 @@
     #copyright{
         font-weight: 700;
     }
+
+    .modal{
+        transform: translateY(-50%);
+        top: 50%;
+        height: unset;
+        &-dialog{
+            max-width: 60%;
+            // @include fluid('max-width', 300, 800);
+
+            @include media-breakpoint-down(lg) {
+                max-width: 80%;
+                margin: 0 auto;
+            }
+        }
+        &-body{
+            background-color: black;
+            aspect-ratio: 16/9;
+            iframe{
+                width: 100%;
+                height: 100%;
+            }
+        }
+    }
 }
     
