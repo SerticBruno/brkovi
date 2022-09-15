@@ -139,8 +139,7 @@ jQuery(document).ready(function(){
     
     jQuery('.video-play-modal').on('click', function(e) {
         var data = jQuery(this).data();
-        console.log('data');
-        console.log(data);
+
         if (data.from == 'lf') {
             var video = '<video class="w-100" controls autoplay><source src="' + data.src + '" type="video/mp4" /></video>';
         } else {
@@ -151,10 +150,7 @@ jQuery(document).ready(function(){
 
         // jQuery(data.bsTarget).find('.modal-body').html(video);
         modal.html(video);
-
-        console.log('data.bstarge');
-        console.log(data.bsTarget);
-
+ 
         jQuery(data.bsTarget).one('hide.bs.modal', function() {
             jQuery(data.bsTarget).find('.modal-body').html('');
         });

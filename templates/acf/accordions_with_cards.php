@@ -77,21 +77,27 @@ $defaultLogo = $header['logo']['url'];
                                     <?php foreach($album['songs'] as $k => $v) { ?>
                                         <?php 
                                             $video = checkID($v['youtube_link']);
+                                            $placeHolderLogo = '';
                                             $url = "https://www.youtube.com/embed/{$video['id']}?autoplay=1&modestbranding=1&rel=0&fs=1&enablejsapi=1";
+
                                             // myErr($video);
                                             if(!empty($v['video_thumbnail'])){
                                                 $logo = wp_get_attachment_image_url($v['video_thumbnail']['ID'], 'high');
                                             }
                                             else{
                                                 $logo = $defaultLogo;
+                                                $placeHolderLogo = ' placeholder-logo';
                                             }
 
                                         ?>
 
-                                        <div class="col-lg-4 mb-3">
+                                        <div class="col-12 col-md-6 col-lg-4 mb-3">
                                             <div class="card my-3 h-100">
                                                 <!-- <iframe src="" frameborder="0" allow="autoplay" allowfullscreen></iframe> -->
-                                                <img class="video-cover video-play-modal" data-bs-toggle="modal" data-bs-target="#modal" data-src="<?php echo $url; ?>" src="<?php echo $logo ?>"/>
+                                                <div class="img-wrapper">
+                                                    <img class="video-cover<?php echo $placeHolderLogo ?>" src="<?php echo $logo ?>"/>
+                                                    <button class="video-play-modal" data-bs-toggle="modal" data-bs-target="#modal" data-src="<?php echo $url; ?>"></button>
+                                                </div>
                                                 <div class="card-title">
                                                     <h4><?php echo $k+1 . '. ' . $v['title']?></h4>
                                                 </div>

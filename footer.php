@@ -5,10 +5,11 @@
 		?>
 
 		<footer class="footer pb-3" role="contentinfo">
+
 			<div class="modal fade" id="modal" tabindex="-1">
-				<div class="modal-dialog">
+				<div class="modal-dialog modal-dialog-centered">
 					<div class="modal-content">
-					<button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+						<button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
 						<div class="modal-body">
 						</div>
 					</div>

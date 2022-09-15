@@ -84,9 +84,34 @@
     }
 
     .modal{
-        transform: translateY(-50%);
-        top: 50%;
-        height: unset;
+        //transform: translateY(-50%);
+        //top: 50%;
+        //height: unset;
+        &-content{
+            border-radius: 0;
+            .btn-close{
+                position: absolute;
+                background-color: white;
+                border-radius: 0;
+                background-image: url(../img/png/close.png);
+                z-index: 10;
+                right: 0;
+                padding: 0;
+                opacity: 1;
+                transform: translate(50%, -50%) rotate(3deg);
+                width: 42px;
+                height: 42px;
+                background-size: contain;
+                border: 2px solid black;
+                transition: $transition;
+
+                &:hover{
+                    background-image: url(../img/png/closeHover.png);
+                    background-color: black;
+                    border-color: white;
+                }
+            }
+        }
         &-dialog{
             max-width: 60%;
             // @include fluid('max-width', 300, 800);

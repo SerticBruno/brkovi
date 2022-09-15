@@ -25,7 +25,7 @@ jQuery(document).ready(function(){
 
     if(jQuery('.wpgb-pagination').length){
         var wpgb = WP_Grid_Builder.instances[1].facets;
-
+        console.log('idemo');
         wpgb.on('loaded', function(args) {
     
             var listToAppend = jQuery('.wpgb-pagination');
@@ -37,8 +37,8 @@ jQuery(document).ready(function(){
                 var nextBtnFound = false;
                 var prevBtnFound = false;
     
-                var prevBtnText = 'Forrige side';
-                var nextBtnText = 'Neste side';
+                var prevBtnText = 'Previous';
+                var nextBtnText = 'Next';
                 
                 pages.each(function(){
     
@@ -109,12 +109,12 @@ function checkIfMobile(){
 
 function createFrontBtn(){
     var list = jQuery('.wpgb-pagination');
-    list.prepend('<li class="page-nav-button-prev"><a href="">Forrige side</a></li>');
+    list.prepend('<li class="page-nav-button-prev"><a href="">Prije</a></li>');
 }
 
 function createNextBtn(){
     var list = jQuery('.wpgb-pagination');
-    list.append('<li class="page-nav-button-next"><a href="">Neste side</a></li>');
+    list.append('<li class="page-nav-button-next"><a href="">Poslije</a></li>');
 }
 
 function removeFrontBtn(){
