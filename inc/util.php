@@ -102,19 +102,19 @@ function isNewArticle($params) {
 }
 
 
-function sendEmail($form) {
-	$user = get_userdata(get_current_user_id());
-	$mail = get_field('new_post__event_info', 'option');
-	$user_page = um_get_core_page('user').$user->data->user_login;
+// function sendEmail($form) {
+// 	$user = get_userdata(get_current_user_id());
+// 	$mail = get_field('new_post__event_info', 'option');
+// 	$user_page = um_get_core_page('user').$user->data->user_login;
 
-	$find = array('{{date}}', '{{user}}', '{{user_page}}', '{{post_type}}', '{{url}}', '{{title}}');
-	$newData = array(date('d.m.Y H:i:s'), $user->data->user_login, $user_page, $form['post_type'], $form['perma'], $form['post_title']);
+// 	$find = array('{{date}}', '{{user}}', '{{user_page}}', '{{post_type}}', '{{url}}', '{{title}}');
+// 	$newData = array(date('d.m.Y H:i:s'), $user->data->user_login, $user_page, $form['post_type'], $form['perma'], $form['post_title']);
 
-	$mail['email_content'] = '<html><body>' . str_replace($find, $newData, $mail['email_content']) . '</body></html>';
-	$mail['headers'] = array('Content-Type: text/html; charset=UTF-8');
+// 	$mail['email_content'] = '<html><body>' . str_replace($find, $newData, $mail['email_content']) . '</body></html>';
+// 	$mail['headers'] = array('Content-Type: text/html; charset=UTF-8');
 
-	$send = wp_mail($mail['email_to'], $mail['email_title'], $mail['email_content'], $mail['headers']);
-}
+// 	$send = wp_mail($mail['email_to'], $mail['email_title'], $mail['email_content'], $mail['headers']);
+// }
 
 
 // Check if given link is from youtube or vimeo
