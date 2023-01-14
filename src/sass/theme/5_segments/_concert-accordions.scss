@@ -1,4 +1,4 @@
-.accordions-with-cards {
+.concert-accordions {
   @include fluid("padding-top", 20, 60);
   @include fluid("padding-bottom", 20, 60);
 
@@ -37,6 +37,12 @@
     .img-wrapper {
       padding-left: 15px;
       height: 100%;
+
+      .arrow-next {
+        path {
+          stroke: white;
+        }
+      }
     }
 
     img {

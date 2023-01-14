@@ -33,6 +33,7 @@ $posts = get_posts();
                     <div class="search-title">
                         <h2>A trazis sto zelis</h2>
                     </div>
+                    <?php wpgb_render_facet( [ 'id' => 2, 'grid' => 'wpgb-content-1' ] ); ?>
                 </div>
             </div>
 
@@ -43,10 +44,10 @@ $posts = get_posts();
 					<?php } 
 				} ?>
             </div>
-<!--             
+            
 			<div class="pagination-wrap d-flex justify-content-center">
-				<?php //wpgb_render_facet( [ 'id' => 1, 'grid' => 'wpgb-content-1' ] ); ?>
-			</div> -->
+				<?php wpgb_render_facet( [ 'id' => 1, 'grid' => 'wpgb-content-1' ] ); ?>
+			</div>
 
         </div>
     </div>
