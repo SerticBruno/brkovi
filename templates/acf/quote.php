@@ -11,7 +11,7 @@ $content = $params['content'];
                 <div class="quotediv quotediv-left">
                     <img src="<?php echo THEME_URL ?>/assets/img/png/note-round.png" />
                 </div>
-                <div class="content text-center">
+                <div class="content">
                     <?php echo $content ?>
                 </div>
                 <div class="quotediv quotediv-right">

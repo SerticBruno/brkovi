@@ -18,6 +18,7 @@ $defaultLogo = $header['logo']['url'];
 
 ?>
 
+
 <section class="accordions-with-cards youtube-cards">
     <div class="container">
         <div class="row justify-content-center">
@@ -45,9 +46,10 @@ $defaultLogo = $header['logo']['url'];
 
                     <div class="accordion-item" style="transform: rotate(<?php echo $randRot ?>deg);">
                         <h2 class="accordion-header" id="heading-<?php echo $k ?>">
-                            <button class="accordion-button w-100 <?php echo ($k > 0) ? 'collapsed' : '' ?>" type="button" data-bs-toggle="collapse" data-bs-target="#collapse-<?php echo $k ?>" aria-expanded="<?php echo ($k > 0) ? 'false' : 'true' ?>" aria-controls="collapse-<?php echo $k ?>">
+                            <button class="accordion-button accordion-button-all w-100 <?php echo ($k > 0) ? 'collapsed' : '' ?>" type="button" data-bs-toggle="collapse" data-bs-target="#collapse-<?php echo $k ?>" aria-expanded="<?php echo ($k > 0) ? 'false' : 'true' ?>" aria-controls="collapse-<?php echo $k ?>">
+
                                 <div class="accordion-title row w-100">
-                                    <div class="col-6">
+                                    <div class="col-10">
                                         <p>
                                             <?php echo ($v['album']->post_title) ?>
                                         </p>
@@ -92,11 +94,11 @@ $defaultLogo = $header['logo']['url'];
                                         ?>
 
                                         <div class="col-12 col-md-6 col-lg-4 mb-3">
-                                            <div class="card my-3 h-100">
+                                            <div class="card my-3 h-100 video-play-card" data-bs-toggle="modal" data-bs-target="#modal" data-src="<?php echo $url; ?>">
                                                 <!-- <iframe src="" frameborder="0" allow="autoplay" allowfullscreen></iframe> -->
                                                 <div class="img-wrapper">
                                                     <img class="video-cover<?php echo $placeHolderLogo ?>" src="<?php echo $logo ?>"/>
-                                                    <button class="video-play-modal" data-bs-toggle="modal" data-bs-target="#modal" data-src="<?php echo $url; ?>"></button>
+                                                    <button class="video-play-modal"></button>
                                                 </div>
                                                 <div class="card-title">
                                                     <h4><?php echo $k+1 . '. ' . $v['title']?></h4>

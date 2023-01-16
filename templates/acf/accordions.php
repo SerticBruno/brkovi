@@ -22,7 +22,7 @@ $wp_query = new WP_Query($args);
                     <?php
 
                         $concert_info = get_field('concert_info', $v->ID);
-                        myErr($concert_info);
+                        // myErr($concert_info);
 
 
                         $rand = rand(1, 4);

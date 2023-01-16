@@ -101,12 +101,31 @@
   }
 
   .card {
+    cursor: pointer;
+
+    &:hover {
+      .img-wrapper {
+        overflow: hidden;
+        img {
+          transition: $transition;
+          scale: 1.2;
+        }
+        .video-play-modal {
+          background-image: url(../img/png/youtubeHover.png);
+        }
+      }
+    }
     // width: 30%;
     .img-wrapper {
       height: 184px;
       display: flex;
       align-items: center;
       position: relative;
+      overflow: hidden;
+
+      img {
+        transition: $transition;
+      }
 
       .placeholder-logo {
         object-fit: contain !important;

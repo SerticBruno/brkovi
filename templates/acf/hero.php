@@ -23,7 +23,6 @@ $button = $post_info['button'];
 
 // myErr($post_info);
 ?>
-
 <section class="hero<?php echo ($style == 'text') ? ' hero-text' : '' ?>">
     <div class="swiper hero-slider">
         <div class="swiper-wrapper h-100">
@@ -49,7 +48,7 @@ $button = $post_info['button'];
                             </div>
                             <div class="row">
                                 <div class="col-6">
-                                    <div class="button-wrapper">
+                                    <div class="button-wrapper" style="transform: rotate(-2deg);">
                                         <?php include THEME_DIR . '/templates/acf/button-show.php'; ?>
                                     </div>
                                 </div>
@@ -136,11 +135,22 @@ $button = $post_info['button'];
                 <?php foreach ($slides as $k => $v) { ?>
 
                     <?php 
-                        $image = wp_get_attachment_image($v['image']['id'], 'full', false, ['class' => 'hero-slide-bg-img', 'style'  => 'object-fit: cover;']);
-                        $title = $v['title'];
-                        $showButton = $v['show_button'];
+                        myErr($v['style']);
+                        if($v['style'] == 'image'){
+                            $image = wp_get_attachment_image($v['image']['id'], 'full', false, ['class' => 'hero-slide-bg-img', 'style'  => 'object-fit: cover;']);
+                            $title = $v['title'];
+                            $subtitle = $v['subtitle'];
+                            $showButton = $v['show_button'];
+                        }
+                        else if($v['style'] == 'video'){
+
+                        }
                     ?>
 
+                    <?php
+
+                    if($v['style'] == 'image'){ ?>
+                    
                     <div class="swiper-slide hero-slide">
                         <div class="hero-slide-bg">
                             <?php echo $image; ?>
@@ -161,15 +171,17 @@ $button = $post_info['button'];
                                     <div class="hero-slide-title">
                                         <?php if($k == 0) { ?>
                                             <h1><span class="basis punk punk"><?php echo $title ?></span></h1>
+                                            <h2 class="basis"><?php echo $subtitle ?></h2>
                                         <?php } else { ?>
                                             <h2 class="h1 punk"><span class="basis"><?php echo $title ?></span></h2>
+                                            <h2 class="basis"><?php echo $subtitle ?></h2>
                                         <?php } ?>
                                     </div>
                                 </div>
                             </div>
                             <div class="row">
                                 <?php if($showButton == 1) { ?>
-                                    <div class="col-6 button-wrapper">
+                                    <div class="col-6 button-wrapper" style="transform: rotate(-2deg);">
                                         <?php 
                                             $button = $v['button'];
                                             include THEME_DIR . '/templates/acf/button-show.php'; 
@@ -185,6 +197,92 @@ $button = $post_info['button'];
                             </div>
                         </div>
                     </div>
+
+                    <?php 
+                    }
+                    else if($v['style'] == 'video'){ 
+                        myErr($v);
+                                                
+                        $showButton = $v['show_button'];
+                        $button = $v['button'];
+                         ?>
+                    <div class="swiper-slide hero-slide">
+                        <div class="hero-slide-bg">
+                            <video class="hero-slide-bg-video" autoplay loop muted>
+                                <source src="<?php echo $v['video']['url'] ?>" type="video/mp4">
+                            </video>
+                            <div class="hero-slide-bg-overlay"></div>
+                        </div>
+                        <div class="container hero-slide-content">
+                            <?php if($showButton == 1) {?>
+                                <div class="row">
+                                    <div class="col-12">
+                                        <div class="slide-pagination d-none d-lg-block">     
+                                            <div class="swiper-pagination pb-5">
+                                                <span class="swiper-pagination-current"></span>
+                                                /
+                                                <span class="swiper-pagination-total"></span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-12 col-lg-9">
+                                        <div class="hero-slide-title">
+                                            <h1 class="basis punk"><?php echo $v['title'] ?></h1>
+                                            <h2 class="basis"><?php echo $v['subtitle'] ?></h2>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="col-6">
+                                        <div class="button-wrapper" style="transform: rotate(-2deg);">
+                                            <?php include THEME_DIR . '/templates/acf/button-show.php'; ?>
+                                        </div>
+                                    </div>
+
+                                    <div class="col-4 ms-auto d-none d-lg-block">
+                                        <div class="scroll-down">
+                                            <p><?php _e('Skrolaj dolje', 'brkovi')?></p>
+                                            <div class="scroll-down-body"></div>
+                                        </div>
+                                    </div>
+                                </div>
+                            <?php } else { ?>
+                                <div class="row align-items-end">
+                                    <div class="col-12">
+                                        <div class="slide-pagination d-none d-lg-block">     
+                                            <div class="swiper-pagination pb-5">
+                                                <span class="swiper-pagination-current"></span>
+                                                /
+                                                <span class="swiper-pagination-total"></span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-12 col-lg-9">
+                                        <div class="hero-slide-title">
+                                            <h1 class="mb-0 punk"><span class="basis"><?php echo $v['title'] ?></span></h1>
+                                            <h2 class="basis"><?php echo $v['subtitle'] ?></h2>
+                                        </div>
+                                    </div>
+                                    <div class="col-3 ms-auto d-none d-lg-block">
+                                        <div class="scroll-down">
+                                            <p><?php _e('Skrolaj dolje', 'brkovi')?></p>
+                                            <div class="scroll-down-body"></div>
+                                        </div>
+                                    </div>
+                                </div>
+                            <?php } ?>
+                        </div>
+                    </div>
+
+                    <?php
+
+                    }
+
+                    ?>
+
+                    
+
+                    
     
                 <?php } ?>
 

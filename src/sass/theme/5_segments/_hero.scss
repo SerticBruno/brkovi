@@ -24,6 +24,7 @@
   }
 
   .button-wrapper {
+    margin-top: 1rem;
     @include media-breakpoint-down(md) {
       padding-bottom: 20px;
       padding-left: 20px;
@@ -46,10 +47,7 @@
     &-title {
       h1 {
         transform: rotate(3deg);
-
-        @include media-breakpoint-down(lg) {
-          padding-bottom: 60px;
-        }
+        padding-bottom: 20px;
       }
       h2 {
         transform: rotate(-1deg);

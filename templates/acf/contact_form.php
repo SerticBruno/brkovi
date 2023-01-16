@@ -3,7 +3,7 @@
         <div class="row">
             <div class="col-12 col-md-6">
                 <h2 class="form-title"><?php echo $params['title']; ?></h2>
-                <p class="form-description">KONTAKT ZA BOOKING – dovedibrkove@gmail.com</p>
+                <div class="form-description"><?php echo $params['description']; ?></div>
             </div>
             <div class="col-12 col-md-6 contact-form-brkovi">
                 <?php //echo do_shortcode('[forminator_form id="429"]'); ?>
