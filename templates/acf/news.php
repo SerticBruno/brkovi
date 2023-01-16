@@ -8,7 +8,7 @@ $posts = get_posts();
 		
 	$argsAll = array(
 		'post_type'         => 'post',
-		'posts_per_page'    => 2,
+		'posts_per_page'    => 0,
 		'orderby'           => 'post_date',
 		'order'             => 'DESC',
 		'wp_grid_builder'   => 'wpgb-content-1',
@@ -32,6 +32,7 @@ $posts = get_posts();
                 <div class="col-3">
                     <div class="search-title">
                         <h2>A trazis sto zelis</h2>
+                        <?php echo do_shortcode('[wpdreams_ajaxsearchlite]'); ?>
                     </div>
                 </div>
             </div>
@@ -42,6 +43,8 @@ $posts = get_posts();
 						<?php get_component_template('cards/news-card', $v); ?>
 					<?php } 
 				} ?>
+            </div>
+            <div class="navigation">
             </div>
 <!--             
 			<div class="pagination-wrap d-flex justify-content-center">
