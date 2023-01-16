@@ -42,7 +42,7 @@ $button = $post_info['button'];
                             <div class="row">
                                 <div class="col-12 col-lg-9">
                                     <div class="hero-slide-title">
-                                        <h1 class="basis"><?php echo $title ?></h1>
+                                        <h1 class="basis punk"><?php echo $title ?></h1>
                                         <h2 class="basis"><?php echo $subtitle ?></h2>
                                     </div>
                                 </div>
@@ -55,9 +55,9 @@ $button = $post_info['button'];
                                 </div>
 
                                 <div class="col-4 ms-auto d-none d-lg-block">
-                                    <div class="animated-mouse">
-                                        <p><?php _e('Skrolaj dolje', 'scala')?></p>
-                                        <div class="animated-mouse-body"></div>
+                                    <div class="scroll-down">
+                                        <p><?php _e('Skrolaj dolje', 'brkovi')?></p>
+                                        <div class="scroll-down-body"></div>
                                     </div>
                                 </div>
                             </div>
@@ -65,13 +65,13 @@ $button = $post_info['button'];
                             <div class="row align-items-end">
                                 <div class="col-12 col-lg-9">
                                     <div class="hero-slide-title">
-                                        <h1 class="mb-0"><span class="basis"><?php echo $title ?></span></h1>
+                                        <h1 class="mb-0 punk"><span class="basis"><?php echo $title ?></span></h1>
                                     </div>
                                 </div>
                                 <div class="col-3 ms-auto d-none d-lg-block">
-                                    <div class="animated-mouse">
-                                        <p><?php _e('Skrolaj dolje', 'scala')?></p>
-                                        <div class="animated-mouse-body"></div>
+                                    <div class="scroll-down">
+                                        <p><?php _e('Skrolaj dolje', 'brkovi')?></p>
+                                        <div class="scroll-down-body"></div>
                                     </div>
                                 </div>
                             </div>
@@ -92,7 +92,7 @@ $button = $post_info['button'];
                             <div class="row">
                                 <div class="col-12 col-lg-9">
                                     <div class="hero-slide-title">
-                                        <h1 class="basis" style="transform: rotate(4deg);"><?php echo $title ?></h1>
+                                        <h1 class="basis punk" style="transform: rotate(4deg);"><?php echo $title ?></h1>
                                         <?php if(!empty($subtitle)){ ?>
                                             <h2 class="basis" style="transform: rotate(2deg);"><?php echo $subtitle ?></h2>
                                         <?php } ?>
@@ -101,14 +101,14 @@ $button = $post_info['button'];
                             </div>
                             <div class="row">
                                 <div class="col-6">
-                                    <div class="green-button-wrapper" style="transform: rotate(-2deg);">
+                                    <div class="button-wrapper" style="transform: rotate(-2deg);">
                                         <?php include THEME_DIR . '/templates/acf/button-show.php'; ?>
                                     </div>
                                 </div>
                                 <div class="col-4 ms-auto d-none d-lg-block">
-                                    <div class="animated-mouse">
-                                        <p><?php _e('Skrolaj dolje', 'scala')?></p>
-                                        <div class="animated-mouse-body"></div>
+                                    <div class="scroll-down">
+                                        <p><?php _e('Skrolaj dolje', 'brkovi')?></p>
+                                        <div class="scroll-down-body"></div>
                                     </div>
                                 </div>
                             </div>
@@ -116,16 +116,16 @@ $button = $post_info['button'];
                             <div class="row align-items-end">
                                 <div class="col-12 col-lg-9">
                                     <div class="hero-slide-title">
-                                        <h1 class="mb-0 basis"><?php echo $title ?></h1>
+                                        <h1 class="mb-0 basis punk"><?php echo $title ?></h1>
                                         <?php if(!empty($subtitle)){ ?>
                                             <h2 class="basis" style="transform: rotate(2deg);"><?php echo $subtitle ?></h2>
                                         <?php } ?>
                                     </div>
                                 </div>
                                 <div class="col-3 ms-auto d-none d-lg-block pb-3">
-                                    <div class="animated-mouse">
-                                        <p class="strong"><?php _e('Skrolaj dolje', 'scala')?></p>
-                                        <div class="animated-mouse-body"></div>
+                                    <div class="scroll-down">
+                                        <p class="strong"><?php _e('Skrolaj dolje', 'brkovi')?></p>
+                                        <div class="scroll-down-body"></div>
                                     </div>
                                 </div>
                             </div>
@@ -160,9 +160,9 @@ $button = $post_info['button'];
                                 <div class="col-12 col-lg-9">
                                     <div class="hero-slide-title">
                                         <?php if($k == 0) { ?>
-                                            <h1><span class="basis"><?php echo $title ?></span></h1>
+                                            <h1><span class="basis punk punk"><?php echo $title ?></span></h1>
                                         <?php } else { ?>
-                                            <h2 class="h1"><span class="basis"><?php echo $title ?></span></h2>
+                                            <h2 class="h1 punk"><span class="basis"><?php echo $title ?></span></h2>
                                         <?php } ?>
                                     </div>
                                 </div>
@@ -177,9 +177,9 @@ $button = $post_info['button'];
                                     </div>
                                 <?php } ?>
                                 <div class="col-4 ms-auto d-none d-lg-block">
-                                    <div class="animated-mouse">
-                                        <p><?php _e('Skrolaj dolje', 'scala')?></p>
-                                        <div class="animated-mouse-body"></div>
+                                    <div class="scroll-down">
+                                        <p><?php _e('Skrolaj dolje', 'brkovi')?></p>
+                                        <div class="scroll-down-body"></div>
                                     </div>
                                 </div>
                             </div>
@@ -193,7 +193,7 @@ $button = $post_info['button'];
                     <section class="intro-two-columns">
                         <div class="row">
                             <div class="col-12">
-                                <h1 class="h2 intro-title" style="color: black;"><?php echo $params['title']?></h1>
+                                <h1 class="h2 intro-title punk" style="color: black;"><?php echo $params['title']?></h1>
                             </div>
                         </div>
                         <div class="row">
