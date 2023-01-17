@@ -4,7 +4,8 @@ $blocks = $params['blocks'];
 
 $args = [
     'post_type' => 'koncerti',
-    // 'posts_per_page' => $params['limit_posts'] ? $limit : -1,
+    'post_count' => 0,
+    'posts_per_page' => -1,
     // 'wp_grid_builder'   => 'wpgb-content-1',
     // 'number_to_load_more' => 3
 ];
@@ -64,16 +65,30 @@ $wp_query = new WP_Query($args);
                         <div id="collapse-<?php echo $k ?>" class="accordion-collapse collapse <?php echo ($k > 0) ? '' : 'show' ?>" aria-labelledby="heading-<?php echo $k ?>"               data-bs-parent="#accordionExample">
                             <div class="accordion-body">
                                 <?php echo $concert_info['content'] ?>
-                                <?php if(!empty($concert_info['post'])){ ?>
-                                    <div class="d-flex">
-                                        <a class="post-link" href="<?php echo get_permalink($concert_info['post']) ?>">
-                                            POGLEDAJ VIŠE
-                                            <div class="img-wrapper img-wrap-arrow d-flex align-items-center">
-                                                <img class="arrow-next replaceSvg" src="<?php echo THEME_URL ?>/assets/img/svg/arrowNext.svg">
-                                            </div>
-                                        </a>
-                                    </div>
-                                <?php }?>
+                                <?php if($concert_info['link'] == 'internal') { ?>
+                                    <?php if(!empty($concert_info['post'])){ ?>
+                                        <div class="d-flex">
+                                            <a class="post-link" href="<?php echo get_permalink($concert_info['post']) ?>">
+                                                POGLEDAJ VIŠE
+                                                <div class="img-wrapper img-wrap-arrow d-flex align-items-center">
+                                                    <img class="arrow-next replaceSvg" src="<?php echo THEME_URL ?>/assets/img/svg/arrowNext.svg">
+                                                </div>
+                                            </a>
+                                        </div>
+                                    <?php }?>
+                                <?php } else if($concert_info['link'] == 'external') { ?>
+                                    <?php if(!empty($concert_info['url'])){ ?>
+                                        <div class="d-flex">
+                                            <a class="post-link" target="blank" href="<?php echo $concert_info['url'] ?>">
+                                                POGLEDAJ VIŠE
+                                                <div class="img-wrapper img-wrap-arrow d-flex align-items-center">
+                                                    <img class="arrow-next replaceSvg" src="<?php echo THEME_URL ?>/assets/img/svg/arrowNext.svg">
+                                                </div>
+                                            </a>
+                                        </div>
+                                    <?php }?>
+                                <?php } ?>
+                                
                             </div>
                         </div>
                     </div>

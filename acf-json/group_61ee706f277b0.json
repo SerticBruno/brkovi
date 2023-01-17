@@ -1315,9 +1315,9 @@
                                 },
                                 {
                                     "key": "field_62cc987549740",
-                                    "label": "File",
-                                    "name": "file",
-                                    "type": "file",
+                                    "label": "Url",
+                                    "name": "url",
+                                    "type": "url",
                                     "instructions": "",
                                     "required": 0,
                                     "conditional_logic": 0,
@@ -1326,12 +1326,8 @@
                                         "class": "",
                                         "id": ""
                                     },
-                                    "uploader": "",
-                                    "return_format": "array",
-                                    "library": "all",
-                                    "min_size": "",
-                                    "max_size": "",
-                                    "mime_types": ""
+                                    "default_value": "",
+                                    "placeholder": ""
                                 }
                             ]
                         }
@@ -1439,13 +1435,46 @@
                                     "acfe_textarea_code": 0
                                 },
                                 {
-                                    "key": "field_62d15a3473877",
+                                    "key": "field_63c6761def49c",
                                     "label": "Link",
                                     "name": "link",
-                                    "type": "page_link",
+                                    "type": "select",
                                     "instructions": "",
                                     "required": 0,
                                     "conditional_logic": 0,
+                                    "wrapper": {
+                                        "width": "",
+                                        "class": "",
+                                        "id": ""
+                                    },
+                                    "choices": {
+                                        "internal": "Internal",
+                                        "external": "External"
+                                    },
+                                    "default_value": false,
+                                    "allow_null": 0,
+                                    "multiple": 0,
+                                    "ui": 0,
+                                    "return_format": "value",
+                                    "ajax": 0,
+                                    "placeholder": ""
+                                },
+                                {
+                                    "key": "field_63c6769bef49e",
+                                    "label": "Internal",
+                                    "name": "internal",
+                                    "type": "page_link",
+                                    "instructions": "",
+                                    "required": 0,
+                                    "conditional_logic": [
+                                        [
+                                            {
+                                                "field": "field_63c6761def49c",
+                                                "operator": "==",
+                                                "value": "internal"
+                                            }
+                                        ]
+                                    ],
                                     "wrapper": {
                                         "width": "",
                                         "class": "",
@@ -1456,6 +1485,30 @@
                                     "allow_null": 0,
                                     "allow_archives": 1,
                                     "multiple": 0
+                                },
+                                {
+                                    "key": "field_63c67659ef49d",
+                                    "label": "External",
+                                    "name": "external",
+                                    "type": "url",
+                                    "instructions": "",
+                                    "required": 0,
+                                    "conditional_logic": [
+                                        [
+                                            {
+                                                "field": "field_63c6761def49c",
+                                                "operator": "==",
+                                                "value": "external"
+                                            }
+                                        ]
+                                    ],
+                                    "wrapper": {
+                                        "width": "",
+                                        "class": "",
+                                        "id": ""
+                                    },
+                                    "default_value": "",
+                                    "placeholder": ""
                                 }
                             ]
                         }
@@ -2030,5 +2083,5 @@
     "acfe_form": 0,
     "acfe_meta": "",
     "acfe_note": "",
-    "modified": 1673912034
+    "modified": 1673953262
 }

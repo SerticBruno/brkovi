@@ -35,7 +35,7 @@
   .card {
     padding: 0;
     border: none;
-    background-color: rgb(226, 226, 226);
+    background-color: black;
     border: 5px solid $black;
     border-radius: 0;
     // padding-bottom: 80px;
@@ -43,6 +43,7 @@
     a {
       @include fluid("padding-top", 10, 20);
       @include fluid("padding-bottom", 10, 20);
+      color: $white;
 
       font-weight: 600;
       transition: all 0.3s ease;
@@ -73,7 +74,7 @@
 
         &:hover {
           transition: all 0.3s ease;
-          color: white;
+          color: $primary;
           background-color: black;
           // font-size: 20px;
 

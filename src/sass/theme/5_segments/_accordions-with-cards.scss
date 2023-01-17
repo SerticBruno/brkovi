@@ -61,6 +61,10 @@
     }
   }
 
+  .video-play-card {
+    height: 90%;
+  }
+
   .accordion-title {
     .concert-date {
       padding-right: 20px;
@@ -98,6 +102,10 @@
     border: 5px solid black !important;
     border-top: 0 !important;
     border-radius: 0 !important;
+
+    a {
+      color: $primary;
+    }
   }
 
   .card {
@@ -160,6 +168,14 @@
     &-title {
       margin: 0;
       padding: 10px;
+      h4 {
+        color: $white;
+      }
     }
   }
+}
+
+::selection {
+  color: black;
+  background: #0074ffcc;
 }

@@ -34,7 +34,7 @@
           transition: all 0.2s ease;
           color: white;
         }
-        @include media-breakpoint-down(sm) {
+        @include media-breakpoint-down(md) {
           padding: 15px 0;
           font-size: 18px;
         }
@@ -68,7 +68,7 @@
         transition: all 0.2s ease;
         margin-right: 0px;
 
-        @include media-breakpoint-down(sm) {
+        @include media-breakpoint-down(md) {
           position: unset;
           visibility: unset;
           opacity: unset;

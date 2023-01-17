@@ -9,7 +9,16 @@ $features = $params['feature'];
         <div class="row justify-content-around">
             <?php foreach($features as $k => $v) { ?>
                 <div class="card col-8 col-md-3 row text-center rot-<?php echo ($k % 6) + 1?>">
-                    <a href="<?php echo $v['link'] ?>">
+                    <?php
+                        if($v['link'] == 'internal'){
+                            $link = $v['internal'];
+                            $target = 'target=""';
+                        }else if($v['link'] == 'external'){
+                            $link = $v['external'];
+                            $target = 'target="_blank"';
+                        }
+                    ?>
+                    <a href="<?php echo $link ?>" <?php echo $target ?>>
                         <img src="<?php echo $v['icon']['url'] ?>"></img>
                         <h3><?php echo $v['title'] ?></h3>
                         <p><?php echo $v['description'] ?></p>

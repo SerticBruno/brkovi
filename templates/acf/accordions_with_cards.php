@@ -94,7 +94,7 @@ $defaultLogo = $header['logo']['url'];
                                         ?>
 
                                         <div class="col-12 col-md-6 col-lg-4 mb-3">
-                                            <div class="card my-3 h-100 video-play-card" data-bs-toggle="modal" data-bs-target="#modal" data-src="<?php echo $url; ?>">
+                                            <div class="card my-3 video-play-card" data-bs-toggle="modal" data-bs-target="#modal" data-src="<?php echo $url; ?>">
                                                 <!-- <iframe src="" frameborder="0" allow="autoplay" allowfullscreen></iframe> -->
                                                 <div class="img-wrapper">
                                                     <img class="video-cover<?php echo $placeHolderLogo ?>" src="<?php echo $logo ?>"/>
