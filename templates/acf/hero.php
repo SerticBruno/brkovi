@@ -341,23 +341,23 @@ $button = $post_info['button'];
         
             <div class="swiper-navigation d-none d-lg-block">
                 <div class="swiper-button swiper-button-next" style="transform: scaleX(-1) rotate(-2deg);">
-                    <img class="replaceSvg" src="<?php echo THEME_URL; ?>/assets/img/svg/angle.svg" alt="">
+                    <img class="replaceSvg" style="opacity: 0;"  src="<?php echo THEME_URL; ?>/assets/img/svg/angle.svg" alt="">
                 </div>
                 <div class="swiper-button swiper-button-prev"  style="transform: rotate(2deg);">
-                    <img class="replaceSvg" src="<?php echo THEME_URL; ?>/assets/img/svg/angle.svg" alt="">
+                    <img class="replaceSvg" style="opacity: 0;"  src="<?php echo THEME_URL; ?>/assets/img/svg/angle.svg" alt="">
                 </div>
             </div>
 
             <div class="swiper-navigation-mobile d-lg-none">
                 <div class="swiper-navigation-mobile-wrap">
-                    <div class="swiper-button swiper-button-prev" style="transform: rotate(-3deg)">
-                        <img class="replaceSvg" src="<?php echo THEME_URL; ?>/assets/img/svg/angle.svg" alt="">
+                    <div class="swiper-button swiper-button-prev" style="transform: rotate(-3deg);">
+                        <img class="replaceSvg" style="opacity: 0;" src="<?php echo THEME_URL; ?>/assets/img/svg/angle.svg" alt="">
                     </div>
                     
                     <div class="swiper-pagination-mobile"></div>
 
                     <div class="swiper-button swiper-button-next" style="transform: scaleX(-1) rotate(3deg);">
-                        <img class="replaceSvg" src="<?php echo THEME_URL; ?>/assets/img/svg/angle.svg" alt="">
+                        <img class="replaceSvg" style="opacity: 0;" src="<?php echo THEME_URL; ?>/assets/img/svg/angle.svg" alt="">
                     </div>
                 </div>
             </div>

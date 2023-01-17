@@ -156,6 +156,7 @@
         left: 46%;
         transform: translate(-50%, -50%);
         width: 9px;
+        transition: $transition;
         height: 15px;
         margin: 0;
       }
@@ -252,12 +253,15 @@
     display: flex;
     align-items: center;
     justify-content: flex-end;
+    transform: rotate(5deg);
+
     p {
       font-size: 14px;
       line-height: 14px;
       font-weight: 600;
       text-transform: uppercase;
       margin: 0 14px 0 0;
+      transform: rotate(-2deg);
       color: $white;
     }
 
@@ -265,9 +269,26 @@
       background-color: rgba(255, 255, 255, 1);
       transform: rotate(5deg);
       border: 3px solid black;
+      animation: bounce 2s ease-in-out infinite;
       img {
         transform: rotate(90deg);
         height: 24px;
+      }
+    }
+
+    @keyframes bounce {
+      0%,
+      20%,
+      50%,
+      80%,
+      100% {
+        transform: translateY(0);
+      }
+      40% {
+        transform: translateY(-30px);
+      }
+      60% {
+        transform: translateY(-20px);
       }
     }
 
@@ -398,4 +419,9 @@
       margin-left: 1rem;
     }
   }
+}
+
+.replaced-svg {
+  transition: $transition;
+  opacity: 1;
 }
