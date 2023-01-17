@@ -56,7 +56,11 @@ $button = $post_info['button'];
                                 <div class="col-4 ms-auto d-none d-lg-block">
                                     <div class="scroll-down">
                                         <p><?php _e('Skrolaj dolje', 'brkovi')?></p>
-                                        <div class="scroll-down-body"></div>
+                                        <!-- <div class="scroll-down-body"> -->
+                                            <div class="img-wrapper ">
+                                                <img src="<?php echo THEME_URL ?>/assets/img/png/arrow-next-empty.png"/>
+                                            </div>
+                                        <!-- </div> -->
                                     </div>
                                 </div>
                             </div>
@@ -70,7 +74,11 @@ $button = $post_info['button'];
                                 <div class="col-3 ms-auto d-none d-lg-block">
                                     <div class="scroll-down">
                                         <p><?php _e('Skrolaj dolje', 'brkovi')?></p>
-                                        <div class="scroll-down-body"></div>
+                                        <!-- <div class="scroll-down-body"> -->
+                                            <div class="img-wrapper ">
+                                                <img src="<?php echo THEME_URL ?>/assets/img/png/arrow-next-empty.png"/>
+                                            </div>
+                                        <!-- </div> -->
                                     </div>
                                 </div>
                             </div>
@@ -107,7 +115,11 @@ $button = $post_info['button'];
                                 <div class="col-4 ms-auto d-none d-lg-block">
                                     <div class="scroll-down">
                                         <p><?php _e('Skrolaj dolje', 'brkovi')?></p>
-                                        <div class="scroll-down-body"></div>
+                                        <!-- <div class="scroll-down-body"> -->
+                                            <div class="img-wrapper ">
+                                                <img src="<?php echo THEME_URL ?>/assets/img/png/arrow-next-empty.png"/>
+                                            </div>
+                                        <!-- </div> -->
                                     </div>
                                 </div>
                             </div>
@@ -124,7 +136,11 @@ $button = $post_info['button'];
                                 <div class="col-3 ms-auto d-none d-lg-block pb-3">
                                     <div class="scroll-down">
                                         <p class="strong"><?php _e('Skrolaj dolje', 'brkovi')?></p>
-                                        <div class="scroll-down-body"></div>
+                                        <!-- <div class="scroll-down-body"> -->
+                                            <div class="img-wrapper ">
+                                                <img src="<?php echo THEME_URL ?>/assets/img/png/arrow-next-empty.png"/>
+                                            </div>
+                                        <!-- </div> -->
                                     </div>
                                 </div>
                             </div>
@@ -191,7 +207,11 @@ $button = $post_info['button'];
                                 <div class="col-4 ms-auto d-none d-lg-block">
                                     <div class="scroll-down">
                                         <p><?php _e('Skrolaj dolje', 'brkovi')?></p>
-                                        <div class="scroll-down-body"></div>
+                                        <!-- <div class="scroll-down-body"> -->
+                                            <div class="img-wrapper ">
+                                                <img src="<?php echo THEME_URL ?>/assets/img/png/arrow-next-empty.png"/>
+                                            </div>
+                                        <!-- </div> -->
                                     </div>
                                 </div>
                             </div>
@@ -242,7 +262,11 @@ $button = $post_info['button'];
                                     <div class="col-4 ms-auto d-none d-lg-block">
                                         <div class="scroll-down">
                                             <p><?php _e('Skrolaj dolje', 'brkovi')?></p>
-                                            <div class="scroll-down-body"></div>
+                                            <!-- <div class="scroll-down-body"> -->
+                                                <div class="img-wrapper ">
+                                                    <img src="<?php echo THEME_URL ?>/assets/img/png/arrow-next-empty.png"/>
+                                                </div>
+                                            <!-- </div> -->
                                         </div>
                                     </div>
                                 </div>
@@ -266,7 +290,11 @@ $button = $post_info['button'];
                                     <div class="col-3 ms-auto d-none d-lg-block">
                                         <div class="scroll-down">
                                             <p><?php _e('Skrolaj dolje', 'brkovi')?></p>
-                                            <div class="scroll-down-body"></div>
+                                            <!-- <div class="scroll-down-body"> -->
+                                                <div class="img-wrapper ">
+                                                    <img src="<?php echo THEME_URL ?>/assets/img/png/arrow-next-empty.png"/>
+                                                </div>
+                                            <!-- </div> -->
                                         </div>
                                     </div>
                                 </div>

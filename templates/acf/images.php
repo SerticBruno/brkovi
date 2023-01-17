@@ -8,7 +8,7 @@ $style = $params['style'];
         <div class="container">
             <div class="row">
                 <div class="col-12">
-                    <div class="grid-container">
+                    <div class="grid-container gallery">
 
                         <?php foreach($params['images'] as $k => $v) { ?>
                                 <?php 
@@ -34,7 +34,7 @@ $style = $params['style'];
         <div class="container">
             <div class="row">
                 <div class="col-12">
-                    <div class="grid-container">
+                    <div class="grid-container gallery">
                         <?php foreach($params['images'] as $k => $v) { ?>
                                 <?php 
                                 $image = wp_get_attachment_image($v['image'], 'full', false);
@@ -58,7 +58,7 @@ $style = $params['style'];
     <div class="container">
         <div class="row">
             <div class="col-12">
-                <div class="img-wrapper">
+                <div class="img-wrapper gallery">
                     <?php 
                     // myErr($params);
                     $image = wp_get_attachment_image($params['images'][0]['image'], 'full', false, ['class' => 'single-video-thumbnail']); 

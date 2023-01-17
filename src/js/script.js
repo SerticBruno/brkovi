@@ -119,6 +119,10 @@ jQuery(document).ready(function () {
   readmoreCustomBig();
   navbarScroll();
 
+  jQuery(".single-img a").simpleLightbox();
+  jQuery(".two-img a").simpleLightbox();
+  jQuery(".five-img a").simpleLightbox();
+  // jQuery(".five-img a").simpleLightbox();
   // jQuery('.video-play').on('click', function() {
   //     // console.log('a');
   //     // console.log(this);

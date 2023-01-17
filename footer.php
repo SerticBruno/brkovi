@@ -33,39 +33,23 @@
 					</div>
 					<div class="col-12 col-md-8 order-last">
 						<ul class="footer-socials d-flex justify-content-around">
-							<li class="d-inline">
-								<a class="d-inline-block" href="#">
-									<img src="<?php echo THEME_URL ?>/assets/img/logos/amazon-pay.png"/>
-								</a>
-							</li>
-							<li class="d-inline">
-								<a class="d-inline-block" href="#">
-									<img src="<?php echo THEME_URL ?>/assets/img/logos/apple-pay.png"/>
-								</a>
-							</li>
-							<li class="d-inline">
-								<a class="d-inline-block" href="#">
-									<img src="<?php echo THEME_URL ?>/assets/img/logos/deezer.png"/>
-								</a>
-							</li>
-							<li class="d-inline">
-								<a class="d-inline-block" href="#">
-									<img src="<?php echo THEME_URL ?>/assets/img/logos/facebook.png"/>
-								</a>
-							</li>
-							<li class="d-inline">
-								<a class="d-inline-block" href="#">
-									<img src="<?php echo THEME_URL ?>/assets/img/logos/spotify.png"/>
-								</a>
-							</li>
+							<?php
+								foreach ($footer['social_icons'] as $k => $v) { 
+									
+									$logo = $v['logo']['url']
+									
+								?>
+									<li class="d-inline">
+										<a class="d-inline-block" target="_blank" href="<?php echo $v['url'] ?>">
+											<img src="<?php echo $logo ?>"/>
+										</a>
+									</li>
+								<?php }
+							?>
 						</ul>						
 					</div>
 					<div class="col-6 col-md-2 info-text order-md-last">
-						<p>
-							10 000, Zagreb<br>
-							Croatia, republic of
-						</p>
-						<!-- <a href="mailto: dovedibrkove@gmail.com">dovedibrkove@gmail.com</a> -->
+						<?php echo $footer['description'] ?>
 					</div>
 				</div>
 			</div>
@@ -79,7 +63,6 @@
 			var homeUrl = '<?php echo get_template_directory_uri(); ?>';
 			var curr_post_id = '<?php echo $post->ID; ?>';
 			var adminAjax = '<?php echo admin_url('admin-ajax.php'); ?>';
-			// console.log(curPageID);
 		</script>
 	</body>
 </html>

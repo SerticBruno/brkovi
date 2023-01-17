@@ -34,7 +34,29 @@
             "layout": "block",
             "acfe_seamless_style": 0,
             "acfe_group_modal": 0,
-            "sub_fields": []
+            "sub_fields": [
+                {
+                    "key": "field_63c5ddc54986e",
+                    "label": "News Page",
+                    "name": "news_page",
+                    "type": "page_link",
+                    "instructions": "",
+                    "required": 0,
+                    "conditional_logic": 0,
+                    "wrapper": {
+                        "width": "",
+                        "class": "",
+                        "id": ""
+                    },
+                    "post_type": [
+                        "page"
+                    ],
+                    "taxonomy": "",
+                    "allow_null": 0,
+                    "allow_archives": 1,
+                    "multiple": 0
+                }
+            ]
         },
         {
             "key": "field_61ee72c6abc4a",
@@ -219,6 +241,25 @@
                             "placeholder": ""
                         }
                     ]
+                },
+                {
+                    "key": "field_63c5e2ebefbe8",
+                    "label": "Description",
+                    "name": "description",
+                    "type": "wysiwyg",
+                    "instructions": "",
+                    "required": 0,
+                    "conditional_logic": 0,
+                    "wrapper": {
+                        "width": "",
+                        "class": "",
+                        "id": ""
+                    },
+                    "default_value": "",
+                    "tabs": "all",
+                    "toolbar": "full",
+                    "media_upload": 1,
+                    "delay": 0
                 }
             ]
         },
@@ -352,5 +393,5 @@
     "acfe_form": 0,
     "acfe_meta": "",
     "acfe_note": "",
-    "modified": 1657374489
+    "modified": 1673913091
 }

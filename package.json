@@ -1,13 +1,13 @@
 {
   "name": "wp_theme",
   "version": "1.2.0",
-  "description": "brkovi WP Theme",
+  "description": "brkovi",
   "main": "Gulpfile.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
-  "author": "Q.Agency",
-  "homepage": "https://q.agency/",
+  "author": "Brkovi",
+  "homepage": "https://brkovi.com/",
   "license": "ISC",
   "dependencies": {
     "bootstrap": "^5.1.3",
@@ -19,7 +19,7 @@
     "owl.carousel": "^2.3.4",
     "popper.js": "^1.16.1",
     "select2": "^4.1.0-rc.0",
-    "simplelightbox": "^2.10.3",
+    "simplelightbox": "^2.12.1",
     "slick-carousel": "^1.8.1",
     "swiper": "^8.3.0"
   },
