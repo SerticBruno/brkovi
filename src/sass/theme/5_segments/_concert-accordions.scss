@@ -34,6 +34,8 @@
 
     transform: rotate(-1deg);
 
+    color: $white;
+
     .img-wrapper {
       padding-left: 15px;
       height: 100%;
@@ -104,6 +106,17 @@
     border: 5px solid black !important;
     border-top: 0 !important;
     border-radius: 0 !important;
+
+    a {
+      color: $primary;
+      &:hover {
+        color: $black;
+      }
+    }
+
+    .post-link {
+      color: $white;
+    }
   }
 
   .card {
