@@ -149,6 +149,19 @@
   }
 
   .search-wrapper {
+    .search-title {
+      .asl_w_container_1 {
+        min-width: unset !important;
+        #ajaxsearchlite1 {
+          background-color: black !important;
+
+          .probox {
+            background-color: black !important;
+            background-image: unset !important;
+          }
+        }
+      }
+    }
     .wpgb-search-facet {
       .wpgb-input {
         border: 3px solid black;
@@ -269,4 +282,30 @@
   .page-nav-button-next a::after {
     content: url(../../assets/img/svg/arrowNextDisabled.svg) !important;
   }
+
+  .innericon {
+    svg {
+      fill: black !important;
+    }
+  }
+  .proclose {
+    svg {
+      border-radius: unset !important;
+      background-color: black !important;
+    }
+  }
+}
+
+#ajaxsearchliteres1 {
+  background-color: black !important;
+}
+
+.promagnifier {
+  background-image: unset !important;
+  background-color: white !important;
+}
+
+.asl_res_url {
+  color: black !important;
+  font-weight: bold !important;
 }

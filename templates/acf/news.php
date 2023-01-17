@@ -22,20 +22,27 @@ $posts = get_posts();
 <section class="news">
     <div class="container">
         <div class="row">
-            <div class="col-12">
-                <h2 class="news-title"><?php echo $params['title'] ?></h2>
+            <div class="col-12 col-md-5">
+                <h2 class="news-title">
+                    <?php echo $params['title'] ?>
+                </h2>
+                <div class="description pb-5">
+                    <?php echo $params['description'] ?>
+                </div>
             </div>
-
-
-            <div class="search-wrapper d-flex justify-content-end load-posts-button ">
-                    
-                <div class="col-3">
-                    <div class="search-title">
-                        <h2>A trazis sto zelis</h2>
-                        <?php echo do_shortcode('[wpdreams_ajaxsearchlite]'); ?>
+            <div class="col-12 col-md-7">
+                <div class="search-wrapper d-flex justify-content-end load-posts-button mb-5">
+                    <div class="col-8">
+                        <div class="search-title">
+                            <!-- <h2 class="pb-3">A trazis sto zelis</h2> -->
+                            <h2 class="pb-3"><?php echo $params['search_title'] ?></h2>
+                            <?php echo do_shortcode('[wpdreams_ajaxsearchlite]'); ?>
+                        </div>
                     </div>
                 </div>
             </div>
+
+
 
             <div class="row news-list wpgb-content-1">
                 <?php if ($the_query_all->post_count > 0) {
