@@ -1,6 +1,4 @@
 <?php
-
-// myErr($params);
 $post_info = get_field('post_hero', $post->ID);
 
 if(!is_null($post_info)){
@@ -17,12 +15,10 @@ $image = ( $style == 'image' ? $image : '<img src="' . get_the_post_thumbnail_ur
 $video = $post_info['video'];
 $slides = $post_info['slides'];
 $subtitle = $post_info['subtitle'];
-
 $showButton = $post_info['show_button'];
 $button = $post_info['button'];
-
-// myErr($post_info);
 ?>
+
 <section class="hero<?php echo ($style == 'text') ? ' hero-text' : '' ?>">
     <div class="swiper hero-slider">
         <div class="swiper-wrapper h-100">
@@ -149,83 +145,68 @@ $button = $post_info['button'];
                 </div>
             <?php } elseif($style == 'slider') {?>
                 <?php foreach ($slides as $k => $v) { ?>
-
                     <?php 
-                        myErr($v['style']);
+                        // myErr($v['style']);
                         if($v['style'] == 'image'){
                             $image = wp_get_attachment_image($v['image']['id'], 'full', false, ['class' => 'hero-slide-bg-img', 'style'  => 'object-fit: cover;']);
                             $title = $v['title'];
                             $subtitle = $v['subtitle'];
                             $showButton = $v['show_button'];
                         }
-                        else if($v['style'] == 'video'){
-
-                        }
                     ?>
-
-                    <?php
-
-                    if($v['style'] == 'image'){ ?>
-                    
-                    <div class="swiper-slide hero-slide">
-                        <div class="hero-slide-bg">
-                            <?php echo $image; ?>
-                            <div class="hero-slide-bg-overlay"></div>
-                        </div>
-                        <div class="container hero-slide-content">
-                            <div class="row">
-                                <div class="col-12">
-                                    <div class="slide-pagination d-none d-lg-block">     
-                                        <div class="swiper-pagination pb-5">
-                                            <span class="swiper-pagination-current"></span>
-                                            /
-                                            <span class="swiper-pagination-total"></span>
+                    <?php if($v['style'] == 'image') { ?>
+                        <div class="swiper-slide hero-slide">
+                            <div class="hero-slide-bg">
+                                <?php echo $image; ?>
+                                <div class="hero-slide-bg-overlay"></div>
+                            </div>
+                            <div class="container hero-slide-content">
+                                <div class="row">
+                                    <div class="col-12">
+                                        <div class="slide-pagination d-none d-lg-block">     
+                                            <div class="swiper-pagination pb-5">
+                                                <span class="swiper-pagination-current"></span>
+                                                /
+                                                <span class="swiper-pagination-total"></span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-12 col-lg-9">
+                                        <div class="hero-slide-title">
+                                            <?php if($k == 0) { ?>
+                                                <h1><span class="basis punk punk"><?php echo $title ?></span></h1>
+                                                <h2 class="basis"><?php echo $subtitle ?></h2>
+                                            <?php } else { ?>
+                                                <h2 class="h1 punk"><span class="basis"><?php echo $title ?></span></h2>
+                                                <h2 class="basis"><?php echo $subtitle ?></h2>
+                                            <?php } ?>
                                         </div>
                                     </div>
                                 </div>
-                                <div class="col-12 col-lg-9">
-                                    <div class="hero-slide-title">
-                                        <?php if($k == 0) { ?>
-                                            <h1><span class="basis punk punk"><?php echo $title ?></span></h1>
-                                            <h2 class="basis"><?php echo $subtitle ?></h2>
-                                        <?php } else { ?>
-                                            <h2 class="h1 punk"><span class="basis"><?php echo $title ?></span></h2>
-                                            <h2 class="basis"><?php echo $subtitle ?></h2>
-                                        <?php } ?>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="row">
-                                <?php if($showButton == 1) { ?>
-                                    <div class="col-6 button-wrapper" style="transform: rotate(-2deg);">
-                                        <?php 
-                                            $button = $v['button'];
-                                            include THEME_DIR . '/templates/acf/button-show.php'; 
-                                        ?>
-                                    </div>
-                                <?php } ?>
-                                <div class="col-4 ms-auto d-none d-lg-block">
-                                    <div class="scroll-down">
-                                        <p><?php _e('Skrolaj dolje', 'brkovi')?></p>
-                                        <!-- <div class="scroll-down-body"> -->
+                                <div class="row">
+                                    <?php if($showButton == 1) { ?>
+                                        <div class="col-6 button-wrapper" style="transform: rotate(-2deg);">
+                                            <?php 
+                                                $button = $v['button'];
+                                                include THEME_DIR . '/templates/acf/button-show.php'; 
+                                            ?>
+                                        </div>
+                                    <?php } ?>
+                                    <div class="col-4 ms-auto d-none d-lg-block">
+                                        <div class="scroll-down">
+                                            <p><?php _e('Skrolaj dolje', 'brkovi')?></p>
                                             <div class="img-wrapper ">
                                                 <img src="<?php echo THEME_URL ?>/assets/img/png/arrow-next-empty.png"/>
                                             </div>
-                                        <!-- </div> -->
+                                        </div>
                                     </div>
                                 </div>
                             </div>
                         </div>
-                    </div>
-
-                    <?php 
-                    }
-                    else if($v['style'] == 'video'){ 
-                        myErr($v);
-                                                
+                    <?php } else if($v['style'] == 'video'){ 
                         $showButton = $v['show_button'];
                         $button = $v['button'];
-                         ?>
+                    ?>
                     <div class="swiper-slide hero-slide">
                         <div class="hero-slide-bg">
                             <video class="hero-slide-bg-video" autoplay loop muted>
@@ -262,11 +243,9 @@ $button = $post_info['button'];
                                     <div class="col-4 ms-auto d-none d-lg-block">
                                         <div class="scroll-down">
                                             <p><?php _e('Skrolaj dolje', 'brkovi')?></p>
-                                            <!-- <div class="scroll-down-body"> -->
-                                                <div class="img-wrapper ">
-                                                    <img src="<?php echo THEME_URL ?>/assets/img/png/arrow-next-empty.png"/>
-                                                </div>
-                                            <!-- </div> -->
+                                            <div class="img-wrapper ">
+                                                <img src="<?php echo THEME_URL ?>/assets/img/png/arrow-next-empty.png"/>
+                                            </div>
                                         </div>
                                     </div>
                                 </div>
@@ -290,30 +269,17 @@ $button = $post_info['button'];
                                     <div class="col-3 ms-auto d-none d-lg-block">
                                         <div class="scroll-down">
                                             <p><?php _e('Skrolaj dolje', 'brkovi')?></p>
-                                            <!-- <div class="scroll-down-body"> -->
-                                                <div class="img-wrapper ">
-                                                    <img src="<?php echo THEME_URL ?>/assets/img/png/arrow-next-empty.png"/>
-                                                </div>
-                                            <!-- </div> -->
+                                            <div class="img-wrapper ">
+                                                <img src="<?php echo THEME_URL ?>/assets/img/png/arrow-next-empty.png"/>
+                                            </div>
                                         </div>
                                     </div>
                                 </div>
                             <?php } ?>
                         </div>
                     </div>
-
-                    <?php
-
-                    }
-
-                    ?>
-
-                    
-
-                    
-    
+                    <?php } ?>
                 <?php } ?>
-
             <?php } elseif($style == 'text') {?>
                 <div class="container">
                     <section class="intro-two-columns">
@@ -332,13 +298,10 @@ $button = $post_info['button'];
                         </div>
                     </section>
                 </div>
-
             <?php } ?>
-            
         </div>
 
         <?php if($style == 'slider') { ?>
-        
             <div class="swiper-navigation d-none d-lg-block">
                 <div class="swiper-button swiper-button-next" style="transform: scaleX(-1) rotate(-2deg);">
                     <img class="replaceSvg" style="opacity: 0;"  src="<?php echo THEME_URL; ?>/assets/img/svg/angle.svg" alt="">
@@ -347,21 +310,17 @@ $button = $post_info['button'];
                     <img class="replaceSvg" style="opacity: 0;"  src="<?php echo THEME_URL; ?>/assets/img/svg/angle.svg" alt="">
                 </div>
             </div>
-
             <div class="swiper-navigation-mobile d-lg-none">
                 <div class="swiper-navigation-mobile-wrap">
                     <div class="swiper-button swiper-button-prev" style="transform: rotate(-3deg);">
                         <img class="replaceSvg" style="opacity: 0;" src="<?php echo THEME_URL; ?>/assets/img/svg/angle.svg" alt="">
                     </div>
-                    
                     <div class="swiper-pagination-mobile"></div>
-
                     <div class="swiper-button swiper-button-next" style="transform: scaleX(-1) rotate(3deg);">
                         <img class="replaceSvg" style="opacity: 0;" src="<?php echo THEME_URL; ?>/assets/img/svg/angle.svg" alt="">
                     </div>
                 </div>
             </div>
-            
         <?php } ?>
     </div>
 </section>

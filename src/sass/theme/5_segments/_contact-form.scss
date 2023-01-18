@@ -7,9 +7,7 @@
   }
   a {
     color: $primary;
-    transition: $transition;
     &:hover {
-      transition: $transition;
       color: $black;
     }
   }

@@ -12,11 +12,11 @@
       a {
         text-decoration: none;
         color: $primary;
-        transition: all 0.2s ease;
+        // transition: all 0.2s ease;
         font-weight: 700;
 
         &:hover {
-          transition: all 0.2s ease;
+          // transition: all 0.2s ease;
           color: $white;
         }
       }
@@ -79,6 +79,12 @@
   }
   #copyright {
     font-weight: 700;
+    a {
+      color: $primary;
+      &:hover {
+        color: $white;
+      }
+    }
   }
 
   .modal {

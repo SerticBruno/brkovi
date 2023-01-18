@@ -21,9 +21,9 @@
 
   a {
     color: $primary;
-    transition: $transition;
+    // transition: $transition;
     &:hover {
-      transition: $transition;
+      // transition: $transition;
       color: $black;
     }
   }

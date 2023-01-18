@@ -54,7 +54,7 @@
 				</div>
 			</div>
 			<div id="copyright" class="text-center">
-				&copy; <?php echo esc_html( date_i18n( __( 'Y', 'brkovi' ) ) ); ?> <?php echo esc_html( get_bloginfo( 'name' ) ); ?>
+				&copy; <a href="<?php echo home_url()?>"> <?php echo esc_html( date_i18n( __( 'Y', 'brkovi' ) ) ); ?> <?php echo esc_html( get_bloginfo( 'name' ) ); ?> </a>
 			</div>
 		</footer>
 		</div>

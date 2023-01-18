@@ -264,57 +264,6 @@
             ]
         },
         {
-            "key": "field_61fcf009b85ad",
-            "label": "Grid builder",
-            "name": "",
-            "type": "tab",
-            "instructions": "",
-            "required": 0,
-            "conditional_logic": 0,
-            "wrapper": {
-                "width": "",
-                "class": "",
-                "id": ""
-            },
-            "placement": "top",
-            "endpoint": 0
-        },
-        {
-            "key": "field_61fcf01ab85ae",
-            "label": "Grid builder",
-            "name": "grid_builder",
-            "type": "group",
-            "instructions": "",
-            "required": 0,
-            "conditional_logic": 0,
-            "wrapper": {
-                "width": "",
-                "class": "",
-                "id": ""
-            },
-            "layout": "block",
-            "acfe_seamless_style": 0,
-            "acfe_group_modal": 0,
-            "sub_fields": [
-                {
-                    "key": "field_61fcf029b85b1",
-                    "label": "Facet ID",
-                    "name": "facet_id",
-                    "type": "wpgb",
-                    "instructions": "",
-                    "required": 0,
-                    "conditional_logic": 0,
-                    "wrapper": {
-                        "width": "",
-                        "class": "",
-                        "id": ""
-                    },
-                    "wpgb_object": "facets",
-                    "font_size": 14
-                }
-            ]
-        },
-        {
             "key": "field_62022df63689d",
             "label": "404",
             "name": "",
@@ -448,5 +397,5 @@
     "acfe_form": 0,
     "acfe_meta": "",
     "acfe_note": "",
-    "modified": 1673977841
+    "modified": 1673978445
 }
