@@ -1,7 +1,9 @@
 </div>
 		<?php
 			$footer = get_field('footer', 'option');
-			//myErr($footer);
+			$image = wp_get_attachment_image_url($footer['footer_image']['id'], 'full');
+			// myErr($footer);
+			// myErr($image);
 		?>
 
 		<footer class="footer pb-3" role="contentinfo">
@@ -17,9 +19,9 @@
 			</div>
 
 			<div class="footer-rip">
-				<img src="<?php echo THEME_URL ?>/assets/img/png/footer-rip.png"/>
+				<img src="<?php echo $image ?>"/>
 			</div>
-			<div class="container">
+			<div class="container pt-5">
 				<div class="row">
 					<div class="col-6 col-md-2">
 							<?php  wp_nav_menu(

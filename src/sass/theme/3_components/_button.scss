@@ -9,6 +9,10 @@
 }
 .btn-primary {
   color: $white;
+
+  &:focus {
+    background-color: $black;
+  }
 }
 
 // .green-button-wrapper {
@@ -43,13 +47,16 @@
     font-weight: 700;
 
     &:hover,
-    &:active,
-    &:focus {
+    &:active {
       outline-color: $black;
       border: 0;
       background-color: $white;
       color: $black !important;
       box-shadow: 9px 8px 0 white !important;
+      outline: 5px solid $black;
+    }
+    &:focus {
+      outline: 5px solid #4e4e4e;
     }
   }
 }

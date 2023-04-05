@@ -21,11 +21,11 @@ $wp_query = new WP_Query($args);
             <div class="accordion col-12" id="accordionExample">
                 <?php foreach($wp_query->posts as $k => $v) { ?>
                     <?php
-
                         $concert_info = get_field('concert_info', $v->ID);
                         // myErr($concert_info);
 
-
+                        $time = "";
+                        $date = "";
                         $rand = rand(1, 4);
                         $randRot = $rand * .1;
 
@@ -35,6 +35,7 @@ $wp_query = new WP_Query($args);
 
                         if(!empty($concert_info['date'])){
                             $date = $concert_info['date'];
+                            $fakeDate = date_create($date);
                         }
                         
                         if(!empty($concert_info['time'])){
@@ -55,7 +56,7 @@ $wp_query = new WP_Query($args);
                                     <?php if(!empty($date) || !empty($time)) { ?>
                                         <div class="concert-date col-6">
                                             <p>
-                                                <?php echo $date ?><?php echo $time ?>
+                                                <?php echo date_format($fakeDate,"d.m.Y.") ?><?php echo $time ?>
                                             </p>
                                         </div>
                                     <?php } ?>

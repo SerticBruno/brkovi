@@ -34,8 +34,7 @@
                     },
                     "choices": {
                         "image": "Image",
-                        "video": "Video",
-                        "slider": "Slider"
+                        "video": "Video"
                     },
                     "default_value": false,
                     "allow_null": 0,
@@ -44,25 +43,6 @@
                     "return_format": "value",
                     "ajax": 0,
                     "placeholder": ""
-                },
-                {
-                    "key": "field_63c520aa613fb",
-                    "label": "Title",
-                    "name": "title",
-                    "type": "text",
-                    "instructions": "",
-                    "required": 0,
-                    "conditional_logic": 0,
-                    "wrapper": {
-                        "width": "",
-                        "class": "",
-                        "id": ""
-                    },
-                    "default_value": "",
-                    "placeholder": "",
-                    "prepend": "",
-                    "append": "",
-                    "maxlength": ""
                 },
                 {
                     "key": "field_62e386f9bb6cc",
@@ -583,5 +563,5 @@
     "acfe_form": 0,
     "acfe_meta": "",
     "acfe_note": "",
-    "modified": 1673863898
+    "modified": 1677762937
 }

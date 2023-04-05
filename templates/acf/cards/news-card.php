@@ -1,7 +1,9 @@
 <?php 
     
 $post = $params;
+
 $image = get_the_post_thumbnail($post);
+
 
 $range = array_merge(range(-11, -3), range(3, 8));
 // $rangeCard = array_merge(range(358, 359), range(1, 2));
